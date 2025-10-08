@@ -6,7 +6,7 @@ ffmpeg is required.
 # How to use?
 Find *clips* folder (Steam -> Settings -> Game Recording -> Raw recordings folder) on your Steam Deck or copy it to any PC with Linux. 
 
-You have to be in a folder with *clips* folder, not in that folder.
+You have to be in a folder with *video* folder, not in that folder.
 
 Run script - copy it's content to a file called script.name.sh, then do ```chmod +x ./script.name.sh``` to make it executable. After that, run ```./path/to/script.name.sh``` after that.
 
@@ -14,9 +14,9 @@ Run script - copy it's content to a file called script.name.sh, then do ```chmod
 #!/bin/bash
 folder=$(pwd)
 echo $folder
-for i in $(ls clips);
+for i in $(ls video);
 do
-  cd ./clips/$i/video/
+  cd ./video/$i/
   cd ./$(ls);
   pwd;
   sleep 10s;
